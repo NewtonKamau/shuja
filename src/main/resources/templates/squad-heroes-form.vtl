@@ -1,0 +1,68 @@
+<h1>Add a hero!</h1>
+
+<form action="/heroes" method="post">
+  <input id="squadId" name="squadId" type="hidden" value="$squad.getId()">
+  <div class="form-group">
+    <label for="name">Hero name</label>
+    <input id="name" name="name" type="text" class="form-control">
+  </div>
+  <div class="form-group">
+    <label for="age">Hero age:</label>
+    <input id="age" name="age" type="number" class="form-control">
+  </div>
+    <div class="form-group">
+      <div class="radio">
+        <label for="power">Hero power:</label><br>
+        <label>
+          <input type="radio" name="power" value="flying">
+          Flying
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="power" value="psychic">
+          Psychic
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="power" value="healing">
+          Healing
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="power" value="laser">
+          Optic Laser
+        </label>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="radio">
+        <label for="power">Hero weakness:</label><br>
+        <label>
+          <input type="radio" name="weakness" value="kryptonite">
+          Kryptonite
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="weakness" value="yellow">
+          Yellow
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="weakness" value="dehydration">
+          Dehydration
+        </label>
+      </div>
+      <div class="radio">
+        <label>
+          <input type="radio" name="weakness" value="hisSon">
+          His Son
+        </label>
+      </div>
+    </div>
+  <button type="submit" class="btn btn-success">Add Hero</button>
+</form>

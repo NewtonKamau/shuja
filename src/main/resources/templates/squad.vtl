@@ -1,0 +1,28 @@
+#if ($squad)
+  <h1>$squad.getSquadName()</h1>
+  <h3>$squad.getCause()</h3>
+  <h2>Attributes:</h2>
+  <h3>$squad.getSquadAttack()</h3>
+  <h3>$squad.getSquadDefense()</h3>
+  <h3>$squad.getSquadHealth()</h3>
+
+  #if ($squad.getHeroes())
+    <h2>Members</h2>
+    <ul>
+      #foreach ($hero in $squad.getHeroes())
+        <li><a href="/heroes/$hero.getId()">$hero.getName()</a></li>
+      #end
+    </ul>
+  #else
+    <h3>No Heroes!</h3>
+  #end
+  #if ($squad.maxCheck())
+    <h4>Your squad is full!</h4>
+  #else
+    <a href="/squads/$squad.getId()/heroes/new">Add a new Hero</a>
+  #end
+#else
+  <em><p>Oops! We can't seem to find that Squad.</p></em>
+#end
+<br>
+<a href="/squads">All Squads</a>

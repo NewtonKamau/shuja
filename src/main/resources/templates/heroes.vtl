@@ -1,0 +1,7 @@
+<h1>All Heroes!</h1>
+<ul>
+  #foreach ($hero in $heroes)
+    <li><a href="/heroes/$hero.getId()">$hero.getName()</a></li>
+  #end
+</ul>
+<a href="/squads">View Squads</a>

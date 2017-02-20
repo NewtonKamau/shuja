@@ -1,0 +1,18 @@
+#if ($heroes)
+  <h1>$heroes.getName()</h1>
+  <h4>Age: $heroes.getAge()</h4>
+  <h4>Power: $heroes.getPower()</h4>
+  <h4>Weakness: $heroes.getWeakness()</h4>
+
+
+  <h2>Attributes:</h2>
+  <h4>Attack: $heroes.getAttack()</h4>
+  <h4>Defense: $heroes.getDefense()</h4>
+  <h4>Health: $heroes.getHealth()</h4>
+#else
+  <em><p>your hero does not exist</p></em>
+#end
+<br>
+<a href="/squads">All Squads</a>
+<br>
+<a href="/heroes">All Heroes</a>
